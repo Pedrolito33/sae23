@@ -14,7 +14,7 @@ MYSQL_BIN="/opt/lampp/bin/mysql"  # Change this path if necessary
 
 # Mapping of building letters to IDs
 declare -A batiment_ids
-batiment_ids=( ["A"]=1 ["B"]=2 ["C"]=3 ["E"]=4 )
+batiment_ids=( ["A"]=1 ["B"]=2 ["C"]=3 ["E"]=4 ["Outside"]=5 )
 
 # Listen for MQTT messages and process each message
 mosquitto_sub -h "$MQTT_BROKER" -t "$MQTT_TOPIC" | while read -r message
